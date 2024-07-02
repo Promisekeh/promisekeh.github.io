@@ -1222,7 +1222,9 @@ input[type="radio"] + label:before {
   display: inline-block;
   position: relative; }
   .image img {
-    border-radius: 0.375em;
+    /* border-radius: 0.375em; */
+    max-width: 100%; 
+    height: auto;
     display: block; }
   .image.left, .image.right {
     max-width: 40%; }
@@ -1595,6 +1597,7 @@ button,
     margin: 0 0 1.5em 0; }
     .mini-posts article .image img {
       display: block;
+      height: auto;
       width: 100%; }
   .mini-posts article:first-child {
     border-top: 0;
@@ -1777,6 +1780,7 @@ button,
       margin: 0 0 2em 0; }
       .posts article .image img {
         display: block;
+        height: auto;
         width: 100%; }
   @media screen and (min-width: 1681px) {
     .posts article:nth-child(3n + 1):before {
@@ -2130,7 +2134,7 @@ button,
     -webkit-flex-shrink: 1;
     -ms-flex-shrink: 1;
     flex-shrink: 1;
-    width: 50%; }
+    width: 100%; }
   #banner .image {
     -moz-flex-grow: 0;
     -webkit-flex-grow: 0;
@@ -2144,7 +2148,10 @@ button,
     margin: 0 0 2em 4em;
     width: 50%; }
     #banner .image img {
-      height: 100%;
+      
+      max-width: 100%; 
+      height: auto;
+      display: block; 
       /* -moz-object-fit: cover;
       -webkit-object-fit: cover;
       -ms-object-fit: cover;
@@ -2153,7 +2160,8 @@ button,
       -webkit-object-position: center;
       -ms-object-position: center;
       object-position: center; */
-      width: 90%; }
+      /* width: 90%;  */
+    }
   @media screen and (orientation: portrait) {
     #banner {
       -moz-flex-direction: column-reverse;
@@ -2161,16 +2169,16 @@ button,
       -ms-flex-direction: column-reverse;
       flex-direction: column-reverse; }
       #banner h1 br {
-        display: none; }
+        display: inline-block; }
       #banner .content {
-        -moz-flex-grow: 0;
+        /* -moz-flex-grow: 0;
         -webkit-flex-grow: 0;
         -ms-flex-grow: 0;
         flex-grow: 0;
         -moz-flex-shrink: 0;
         -webkit-flex-shrink: 0;
         -ms-flex-shrink: 0;
-        flex-shrink: 0;
+        flex-shrink: 0; */
         width: 100%; }
       #banner .image {
         -moz-flex-grow: 0;
@@ -2186,9 +2194,9 @@ button,
         max-height: 50vh;
         min-height: 18em;
         width: 100%; } }
-  @media screen and (orientation: portrait) and (max-width: 480px) {
+  @media screen and (orientation: portrait) and (max-width: 100%) {
     #banner .image {
-      max-height: 35vh; } }
+      max-height: 100%; } }
 
 /* Footer */
 #footer .copyright {
