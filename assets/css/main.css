@@ -1600,6 +1600,39 @@ button,
     margin-top: 0;
     padding-top: 0; }
 
+/* Responsive iframe container */
+.mini-posts2 article .frame-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+}
+
+.mini-posts2 article .frame-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Grid layout for mini-posts */
+.mini-posts2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+}
+
+.mini-posts2 article {
+  margin: 0;
+  padding: 0;
+  border-top: none;
+}
+
+
 /* Features */
 .features {
   display: -moz-flex;
